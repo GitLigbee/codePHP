@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>json</title>
+    <style type="text/css">
+        tr{background-color: #41a0f4;font-size: 12px;height: 30px}
+        td{text-align: center}
+    </style>
+    <script type="text/javascript" src="common.js"></script>
+    <script>
+        window.onload=function(){
+            var xhr = create_xhr();
+            xhr.open('post','json.php');
+            xhr.setRequestHeader('Content-type','application/x-www-form-urlencoded');
+            xhr.onreadystatechange=function(){
+                if(xhr.readyState==4&&xhr.status==200){
+                    var value = xhr.responseText;
+                    var data = eval(value);
+                    for(var i=0; i<data.length;i++){
+                        var tr = document.createElement('tr');
+                        var td_id = document.createElement('td');
+                        td_id.innerHTML=i+1;
+                        var td_name = document.createElement('td');
+                        td_name.innerHTML = data[i].name;
+                        var td_password = document.createElement('td');
+                        td_password.innerHTML = data[i].passward;
+                        var td_email = document.createElement('td');
+                        td_email.innerHTML = data[i].email;
+                        var td_age = document.createElement('td');
+                        td_age.innerHTML = data[i].age;
+                        tr.appendChild(td_id);
+                        tr.appendChild(td_name);
+                        tr.appendChild(td_password);
+                        tr.appendChild(td_email);
+                        tr.appendChild(td_age);
+                        document.getElementsByTagName('TBODY')[0].appendChild(tr);
+                    }
+                }
+            };
+            xhr.send(null);
+        }
+    </script>
+</head>
+<body>
+    <table width="800" cellspacing="3" cellpadding="4" >
+        <tr>
+            <td>id</td>
+            <td>name</td>
+            <td>password</td>
+            <td>email</td>
+            <td>age</td>
+        </tr>
+    </table>
+</body>
+</html>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE class SYSTEM ".\demo.dtd"[
+<!ENTITY age "18">
+]>
+<class>
+	<student>
+		<name>lig</name>
+		<age>&age;</age>
+	</student>
+	<student>
+		<name>bee</name>
+		<age>&age;</age>
+	</student>
+</class>

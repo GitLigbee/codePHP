@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE class[
+<!ELEMENT class (student+)>
+<!ELEMENT student (name,age,hobby+)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT age (#PCDATA)>
+<!ELEMENT hobby (#PCDATA)>
+]>
+<class>
+	<student>
+		<name></name>
+		<age></age>
+		<hobby></hobby>
+	</student>
+</class>

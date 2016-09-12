@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<demo xmlns:lig="http://www.lig.com" xmlns:bee="http://www.bee.com">
+	<lig:betch-list>
+			<lig:betch></lig:betch>
+	</lig:betch-list>
+	<bee:betch-list>
+			<bee:betch></bee:betch>
+	</bee:betch-list>
+</demo>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html[
+<!ELEMENT html (body)>
+<!ELEMENT body (#PCDATA|p)*>
+<!ELEMENT p (#PCDATA)>
+]>
+<html>
+	<body>
+		document<p>ligbee</p>
+	</body>
+</html>

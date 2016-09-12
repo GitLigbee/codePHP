@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE book SYSTEM "D:\phpStudy\WWW\app\xml\attlist\fixed\attlist_fix.dtd">
+<book id="iso" pub="" medium="纸质" type="计算机" pagesize="">
+	<name language="chinese"></name>
+</book>

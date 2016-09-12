@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE class[
+<!ELEMENT class ANY>
+<!ELEMENT student (name)>
+<!ELEMENT name (#PCDATA)>
+]>
+<!--
+<class>
+</class>
+-->
+<class>
+<student><name>q</name></student>
+<name></name>
+</class>

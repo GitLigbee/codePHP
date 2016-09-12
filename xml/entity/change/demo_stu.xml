@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE roster SYSTEM ".\attlist_ch.dtd"[
+<!ENTITY % p "student">
+]>
+<roster>
+	<student>
+		<name></name>
+	</student>
+</roster>

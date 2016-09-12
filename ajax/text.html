@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ajax</title>
+    <script type="text/javascript" src="common.js"></script>
+    <script type="text/javascript">
+        window.onload=function(){
+  
+            $('user').onblur=function(){
+              
+                var name = this.value;
+                var xhr = create_xhr();
+                var url = 'index.php?name='+name;
+                
+                xhr.open('get',url);
+                xhr.onreadystatechange=function(){
+                    if(xhr.readyState==4&&xhr.status==200){
+                        var num=xhr.responseText;
+                        if(num==1){
+                            $('useremind').innerHTML="<font color=red>用户名已存在</font>";
+                        }else{
+                            $('useremind').innerHTML="<font color=green>用户名可用</font>";
+                        }
+                    }
+                }
+                xhr.send('');
+            }
+        }
+    </script>
+</head>
+<body>
+    <form action="">
+      <table>
+          <tr>
+           <td>用户名：</td>
+           <td><input type="text" id="user"></td>
+           <td id="useremind"></td>
+       </tr>
+       <tr>
+           <td>密码：</td>
+           <td><input type="password" id="pass1"></td>
+       </tr>
+       <tr>
+           <td>确认：</td>
+           <td><input type="password" id="pass2"></td>
+       </tr>
+       <tr>
+           <td></td>
+           <td><input type="submit" value="submit"></td>
+           <td></td>
+       </tr>
+      </table>
+    </form>
+</body>
+</html>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<books>
+  <book type="web">
+    <name>php</name>
+  </book>
+  <book type="web">
+    <name>java</name>
+  </book>
+  <book type="client">
+    <name>html</name>
+  </book>
+</books>

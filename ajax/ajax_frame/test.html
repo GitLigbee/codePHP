@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>frame</title>
+    
+    <style type="text/css">
+        #show{width: 340px;border:2px outset #eeeeee;display: none;
+}
+        
+    </style>
+    
+    <script type="text/javascript" src="common.js"></script>
+    
+    <script type="text/javascript">
+        
+        window.onload = function(){
+            $('butG').onclick = function(){
+                $.get('index.php','user=xiaoxiao',function(msg){
+                    alert(msg);
+                });
+            };
+            
+            $('butP').onclick = function(){
+                $.post('index.php','user=data',function(msg){
+                    alert(msg);
+                });
+            };
+            
+            search();
+            
+        };
+        
+        function search(){
+            
+            $('search').onkeyup = function(){
+                $('show').innerHTML='';
+                var word = this.value;
+                var data = 'word='+word;
+                if(word.length==0){
+                    $('show').innerHTML='';
+                    $('show').style.display='none';
+                    return;
+                }
+                $.post('search.php',data,function(msg){
+//                    alert(msg);
+                    var length = msg.length;
+                    
+                    if(length>0){
+                        $('show').style.display='block';
+                    }else{
+                        $('show').style.display='none';
+                    }
+                    for(var i=0; i<length; i++){
+                        
+                        var name = msg[i].type_name;
+                        
+                        var div = document.createElement('div');
+                        div.innerHTML = name;
+                        
+                        $('show').appendChild(div);
+                    }
+                },'json');
+            };
+        }
+    
+    </script>
+</head>
+<body>
+    <input type="button" value="check" id="butG">
+    <br>
+    <input type="button" value="post" id="butP">
+    <br>
+    <br>
+    <input type="text" id="search" size="50">
+    <div id="show"></div>
+</body>
+</html>

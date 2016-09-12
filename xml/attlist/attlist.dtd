@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT book (name)>
+<!ELEMENT name (#PCDATA)>
+<!ATTLIST book 
+id ID #REQUIRED
+medium CDATA #FIXED "纸质"
+type CDATA  "计算机"
+pub CDATA #REQUIRED
+pagesize CDATA #IMPLIED
+>
+<!ATTLIST name language (english|chinese)  "english">

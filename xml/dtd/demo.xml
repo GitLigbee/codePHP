@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE class SYSTEM "D:\phpStudy\WWW\app\xml\dtd\demo.dtd">
+<class>
+	<student>
+		<name>lig</name>
+		<age>18</age>
+		<hobby>reading</hobby>
+	</student>
+</class>
