@@ -1,0 +1,8 @@
+LogExpection: connect fail in D:\php\codePHP\exception\log.php:25
+Stack trace:
+#0 {main}
+getMessage : connect fail
+getFile : D:\php\codePHP\exception\log.php
+getCode : 4
+getLine : 25
+getTraceasString : #0 {main}

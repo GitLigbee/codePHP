@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JsonP</title>
+</head>
+<body>
+    <h1>www.site.php</h1>
+    
+</body>
+<script type="text/javascript">
+    function callback(data) {
+        console.log('jsonp');
+        alert(data.message);
+    }
+    //添加<script>标签的方法
+    function addScriptTag(src){
+        var script = document.createElement('script');
+            script.setAttribute("type","text/javascript");
+            script.src = src;
+            document.body.appendChild(script);
+    }
+    
+    window.onload = function(){
+        addScriptTag("http://www.php7.com/code/jsonp/jsonp.php?jsonp=callback");
+    }
+</script>
+</html>

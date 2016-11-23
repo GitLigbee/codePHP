@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>cross-domain</title>
+</head>
+<body>
+    <form action="./domainA.php" method="get">
+        <input type="hidden" name="redirect_url" value="<?php echo $_GET['redirect_url']; ?>">
+        <table>
+            <tr>
+                <td>
+                    user:<input type="text" name="user">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    pass:<input type="password" name="pass" id="">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="submit" value="login">
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
