@@ -5,7 +5,7 @@ function xrange($start, $end, $step = 1) {
     }
 }
  
-foreach (xrange(1, 1000000) as $num) {
+foreach (xrange(1, 10) as $key => $num) {
     echo $num, "\n";
 }
 

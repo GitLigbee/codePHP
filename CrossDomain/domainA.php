@@ -37,7 +37,7 @@ if(isset($_SESSION['login'])){
         $res = $domain->check($user,$pass);
         if($res){
             $_SESSION['login'] = true;
-            if(isset($_GET['redirect_url'])){
+            if(!empty($_GET['redirect_url'])){
                 $url = "http://www.".$_GET['redirect_url']."?session_id=".session_id();
                 header("Location:$url");
             }
