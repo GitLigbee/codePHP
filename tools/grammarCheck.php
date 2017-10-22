@@ -36,6 +36,7 @@ if(!empty($readFile)) {
         $files = combinationRouteByArr($data, $constants['root']);
     }
 }
+
 gammarCheck($files);
 
 function combinationRouteByArr($projects, $root)
